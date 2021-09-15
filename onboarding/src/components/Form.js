@@ -23,10 +23,11 @@ export default function Form(props) {
           <div>{errors.first_name}</div>
           <div>{errors.last_name}</div>
           <div>{errors.email}</div>
+          <div>{errors.password}</div>
         </div>
       </div>
 
-      <div classname="form-group inputs">
+      <div className="form-group inputs">
         <h4>User Information</h4>
         <label>
           First Name
@@ -71,7 +72,7 @@ export default function Form(props) {
           <input
             type="checkbox"
             name="termsOfService"
-            checked={values.checked}
+            checked={values.termsOfService}
             onChange={onChange}
           />
         </label>

@@ -42,7 +42,7 @@ function App() {
 
   const postNewUser = (newUser) => {
     axios
-      .post("https://reqres.in/api/users")
+      .post("https://reqres.in/api/users", newUser)
       .then((res) => {
         setUsers([res.data, ...users]);
         setFormValues(initialFormValues);
