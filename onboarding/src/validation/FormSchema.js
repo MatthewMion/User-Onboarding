@@ -1,11 +1,14 @@
 import * as yup from "yup";
 
 const formSchema = yup.object().shape({
-  username: yup
+  first_name: yup
     .string()
-    .trim()
-    .required("Username is required!")
-    .min(3, "Username  must be 3 characters long!"),
+    .required("First Name is required!")
+    .min(3, "First Name must be 3 characters long!"),
+  last_name: yup
+    .string()
+    .required("Last Name is required!")
+    .min(3, "Last name must be 3 characters long!"),
   email: yup
     .string()
     .email("Must be a valid email address!")
