@@ -71,5 +71,14 @@ describe("Forms App", () => {
       submitBtn().click();
       cy.contains("Testing...");
     });
+    it("form validation if input is left empty", () => {
+      firstNameInput().type("Testing...");
+      lastNameInput().type("Testing...");
+      emailInput().type(" ");
+      passwordInput().type("Testing...");
+      termsOfServiceInput().click();
+      termsOfServiceInput().should("have.checked", "true");
+      submitBtn().should("be.disabled");
+    });
   });
 });
